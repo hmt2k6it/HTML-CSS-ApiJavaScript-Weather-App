@@ -107,12 +107,12 @@ function updateForecastItems(weatherData) {
     weather: [{ id }],
     main: { temp },
   } = weatherData;
-  const dateTaken = new Date(date);
-  const dateOption = {
-    day: "2-digit",
-    month: "short",
-  };
-  const dateResult = dateTaken.toLocaleDateString("en-US", dateOption);
+
+  const dateTaken = new Date(date.replace(" ", "T"));
+  const day = dateTaken.getDate().toString().padStart(2, "0");
+  const month = dateTaken.toLocaleString("en-US", { month: "short" });
+  const dateResult = `${day} ${month}`;
+
   const forecastItem = `
     <div class="forecast-item">
       <h5 class="forecast-item-date regular-txt">${dateResult}</h5>
