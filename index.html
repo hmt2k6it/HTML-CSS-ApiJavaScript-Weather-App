@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <script src="assets/js/main.js" defer></script>
+    <!-- Import Google Icon -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <title>Weather App</title>
+  </head>
+  <body>
+    <main class="main-container">
+      <!-- * -->
+      <header class="input-container">
+        <input type="text" class="city-input" placeholder="Seach City" />
+        <button class="search-btn">
+          <span class="material-symbols-outlined"> search </span>
+        </button>
+      </header>
+      <!-- * -->
+      <section class="weather-info" style="display: none">
+        <!-- ** -->
+        <div class="location-date-container">
+          <div class="location">
+            <span class="material-symbols-outlined"> location_on </span>
+            <h4 class="country-txt">Ho Chi Minh C.T</h4>
+          </div>
+          <h5 class="current-date-txt regular-txt">Wed, 07 Aug</h5>
+        </div>
+        <!-- ** -->
+        <div class="weather-summary-container">
+          <img
+            src="./assets/weather/clouds.svg"
+            class="weather-summary-image"
+          />
+          <div class="weather-summary-info">
+            <h4 class="temp-txt">29 °C</h4>
+            <h3 class="condition-txt regular-txt">Clouds</h3>
+          </div>
+        </div>
+        <!-- ** -->
+        <div class="weather-conditions-container">
+          <div class="codition-item">
+            <span class="material-symbols-outlined"> water_drop </span>
+            <div class="codition-info">
+              <h5 class="regular-txt">Humidity</h5>
+              <h5 class="humidity-value">35%</h5>
+            </div>
+          </div>
+          <div class="codition-item">
+            <span class="material-symbols-outlined"> air </span>
+            <div class="codition-info">
+              <h5 class="regular-txt">Wind Speed</h5>
+              <h5 class="windspeed-value">2 M/s</h5>
+            </div>
+          </div>
+        </div>
+        <!-- ** -->
+        <div class="forecast-items-container">
+        </div>
+      </section>
+      <!-- * -->
+      <section class="search-city section-message">
+        <img src="./assets/message/search-city.png">
+         <div>
+            <h1>Search City</h1>
+            <h4 class="regular-txt">Find out the weather codition of the city</h4>
+         </div>
+       </section>
+      <!-- * -->
+      <section class="not-found section-message" style="display: none">
+        <img src="./assets/message/not-found.png" />
+        <div>
+          <h1>Search City</h1>
+          <h4 class="regular-txt">Find out the weather codition of the city</h4>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
